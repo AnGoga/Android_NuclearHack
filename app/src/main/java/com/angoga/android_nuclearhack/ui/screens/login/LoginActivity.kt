@@ -72,6 +72,6 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "Введите данные", Toast.LENGTH_LONG).show()
             return
         }
-        viewModel.login(email, password)
+        viewModel.login(email, password, this)
     }
 }

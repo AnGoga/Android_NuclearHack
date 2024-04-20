@@ -13,4 +13,6 @@
     <string name="create_text">Создать</string>
     <string name="create_publication">Создать публикацию</string>
     <string name="scan">Сканировать</string>
+    <string name="scan_for_sign_in">Отсканируйте, чтобы войти</string>
+    <string name="welcome">Добро пожаловать!</string>
 </resources>

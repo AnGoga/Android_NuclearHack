@@ -5,6 +5,4 @@ import android.os.Bundle
 import com.angoga.android_nuclearhack.R
 import com.journeyapps.barcodescanner.CaptureActivity
 
-class CameraScanActivity : CaptureActivity() {
-
-}
+class CameraScanActivity : CaptureActivity()

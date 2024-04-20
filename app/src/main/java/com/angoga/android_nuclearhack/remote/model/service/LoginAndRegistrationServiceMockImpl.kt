@@ -12,22 +12,26 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 
-interface LoginAndRegistrationService {
-    @POST("/public/auth/registration")
-    suspend fun register(@Body request: RegistrationRequest): UserResponse
+object LoginAndRegistrationServiceMockImpl : LoginAndRegistrationService {
+    override suspend fun register(request: RegistrationRequest): UserResponse {
+        return UserResponse(123, "111@gamil;.com", "NAME")
+    }
 
-    @POST("/public/auth/login")
-    suspend fun login(@Body request: LoginRequest): LoginResponse
+    override suspend fun login(request: LoginRequest): LoginResponse {
+        return LoginResponse("MY_JWT")
+    }
 
-    @GET("/user/me")
-    suspend fun getSelfProfile(): UserResponse
+    override suspend fun getSelfProfile(): UserResponse {
+        return UserResponse(123, "111@gamil;.com", "NAME")
+    }
 
-    // ---------------------- WEB AUTH ----------------------------
+    override suspend fun grantAccess(request: WebAuthLoginResponse): MessageResponse {
+        return MessageResponse("GOOD???")
+    }
 
-    @POST("/web_auth/grant_access")
-    suspend fun grantAccess(@Body request: WebAuthLoginResponse): MessageResponse
+    override suspend fun webAuthRegister(request: WebAuthRegistrationRequest): MessageResponse {
+        return MessageResponse("GOOD???")
+    }
 
-    @POST("/web_auth/register")
-    suspend fun webAuthRegister(@Body request: WebAuthRegistrationRequest): MessageResponse
 
 }

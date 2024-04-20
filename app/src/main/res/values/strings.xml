@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Android_NuclearHack</string>
+
+    <string name="mail">Почта</string>
+    <string name="name">Имя</string>
+    <string name="signup">Зарегистрироваться</string>
+    <string name="login">Войти</string>
+    <string name="password">Пароль</string>
+    <string name="not_registered_yet_question">Ещё не зарегистрированы? Зарегистрироваться!</string>
+    <string name="news_title">Заголовок</string>
+    <string name="news_content">Содержимое новости</string>
+    <string name="create_news_text">Публикация новости</string>
+    <string name="create_text">Создать</string>
+    <string name="create_publication">Создать публикацию</string>
+    <string name="scan">Сканировать</string>
 </resources>

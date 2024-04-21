@@ -3,7 +3,7 @@ package com.angoga.android_nuclearhack.ui.screens.home
 import androidx.lifecycle.ViewModel
 import com.angoga.android_nuclearhack.remote.model.request.WebAuthGrantAccessRequest
 import com.angoga.android_nuclearhack.remote.model.service.LoginAndRegistrationService
-import com.angoga.kfd_workshop_mobile.remote.model.Result
+import com.angoga.android_nuclearhack.remote.model.Result
 import kotlinx.coroutines.Dispatchers
 
 import kotlinx.coroutines.withContext

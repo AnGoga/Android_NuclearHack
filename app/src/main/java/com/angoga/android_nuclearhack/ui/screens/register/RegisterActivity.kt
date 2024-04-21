@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.angoga.android_nuclearhack.databinding.ActivityRegisterBinding
 import com.angoga.android_nuclearhack.ui.screens.login.LoginActivity
-import com.angoga.kfd_workshop_mobile.remote.model.Result
+import com.angoga.android_nuclearhack.remote.model.Result
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

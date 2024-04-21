@@ -2,13 +2,10 @@ package com.angoga.android_nuclearhack.ui.screens.register
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.angoga.android_nuclearhack.remote.model.request.LoginRequest
 import com.angoga.android_nuclearhack.remote.model.request.RegistrationRequest
 import com.angoga.android_nuclearhack.remote.model.response.LoginResponse
-import com.angoga.android_nuclearhack.remote.model.response.UserResponse
-import com.angoga.android_nuclearhack.remote.model.service.HttpClient
 import com.angoga.android_nuclearhack.remote.model.service.LoginAndRegistrationService
-import com.angoga.kfd_workshop_mobile.remote.model.Result
+import com.angoga.android_nuclearhack.remote.model.Result
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow

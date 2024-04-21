@@ -6,12 +6,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.angoga.android_nuclearhack.databinding.ActivityLoginBinding
-import com.angoga.android_nuclearhack.remote.model.response.LoginResponse
 import com.angoga.android_nuclearhack.ui.screens.enter_email.EnterEmailActivity
 import com.angoga.android_nuclearhack.ui.screens.register.RegisterActivity
 import com.angoga.android_nuclearhack.ui.screens.home.HomeActivity
-import com.angoga.android_nuclearhack.ui.screens.qr_login.QrLoginActivity
-import com.angoga.kfd_workshop_mobile.remote.model.Result
+import com.angoga.android_nuclearhack.remote.model.Result
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

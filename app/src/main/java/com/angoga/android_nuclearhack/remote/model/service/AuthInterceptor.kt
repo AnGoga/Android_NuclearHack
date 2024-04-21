@@ -10,7 +10,8 @@ class AuthInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val originalRequest = chain.request()
 
-        val jwt = if (originalRequest.url().toString().contains("/web_auth/")) {
+        val jwt = if (originalRequest.url().toString().contains("/public/web_auth/")
+            || originalRequest.url().toString().contains("/waiting/web_auth/")) {
             App.app.getSharedPreferences("JWT", Context.MODE_PRIVATE).getString("WEB_JWT", "")!!
         } else {
             App.app.getSharedPreferences("JWT", Context.MODE_PRIVATE).getString("JWT", "")!!

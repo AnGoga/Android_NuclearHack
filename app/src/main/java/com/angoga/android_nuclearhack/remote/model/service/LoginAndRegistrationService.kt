@@ -34,7 +34,7 @@ interface LoginAndRegistrationService {
     @POST("${API_V1_PUBLIC}web_auth/login")
     suspend fun webLogin(@Body request: WebAuthLoginRequest): WebAuthLoginResponse
 
-    @POST("${API_V1_PUBLIC}web_auth/check_access")
+    @POST("${API_V1}waiting/web_auth/check_access")
     suspend fun checkAccess(): Response<GrantedAccessResponse>
 
     @POST("${API_V1}web_auth/registration")

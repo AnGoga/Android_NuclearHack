@@ -1,4 +1,4 @@
-package com.angoga.kfd_workshop_mobile.remote.model
+package com.angoga.android_nuclearhack.remote.model
 
 sealed class Result<T> {
     data class Success<T>(val data: T): Result<T>()

@@ -11,7 +11,7 @@ import com.angoga.android_nuclearhack.remote.model.response.LoginResponse
 import com.angoga.android_nuclearhack.remote.model.response.MessageResponse
 import com.angoga.android_nuclearhack.remote.model.service.LoginAndRegistrationService
 import com.angoga.android_nuclearhack.service.CryptoService
-import com.angoga.kfd_workshop_mobile.remote.model.Result
+import com.angoga.android_nuclearhack.remote.model.Result
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow

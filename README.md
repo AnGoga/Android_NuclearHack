@@ -35,14 +35,15 @@
    ```bash
    git clone https://github.com/AnGoga/Android_NuclearHack.git
 
-Откройте проект в Android Studio.
-Соберите проект (Build -> Make Project).
-Запустите приложение на эмуляторе или реальном устройстве.
-Как внести свой вклад
+2. Откройте проект в Android Studio.
+3. Соберите проект (Build -> Make Project).
+4. Запустите приложение на эмуляторе или реальном устройстве.
+5. 
+### Как внести свой вклад
 Для внесения изменений в проект:
 
-Форкните репозиторий.
-Создайте новую ветку (git checkout -b feature/YourFeature).
-Сделайте коммиты ваших изменений (git commit -am 'Add some feature').
-Отправьте ветку на GitHub (git push origin feature/YourFeature).
-Создайте новый Pull Request.
+- Форкните репозиторий.
+- Создайте новую ветку (git checkout -b feature/YourFeature).
+- Сделайте коммиты ваших изменений (git commit -am 'Add some feature').
+- Отправьте ветку на GitHub (git push origin feature/YourFeature).
+- Создайте новый Pull Request.

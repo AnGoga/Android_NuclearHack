@@ -8,7 +8,9 @@ import androidx.lifecycle.lifecycleScope
 import com.angoga.android_nuclearhack.databinding.ActivityRegisterBinding
 import com.angoga.android_nuclearhack.ui.screens.login.LoginActivity
 import com.angoga.kfd_workshop_mobile.remote.model.Result
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RegisterActivity : AppCompatActivity() {
@@ -31,7 +33,10 @@ class RegisterActivity : AppCompatActivity() {
                         finish()
                     }
                     is Result.Error -> {
-                        Toast.makeText(this@RegisterActivity, it.e.message, Toast.LENGTH_LONG).show()
+                        withContext(Dispatchers.Main) {
+                            Toast.makeText(this@RegisterActivity, it.e.message, Toast.LENGTH_LONG)
+                                .show()
+                        }
                     }
                 }
             }

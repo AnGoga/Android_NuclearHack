@@ -7,9 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.angoga.android_nuclearhack.R
 import com.angoga.android_nuclearhack.databinding.ActivityHomeBinding
-import com.angoga.android_nuclearhack.remote.model.request.WebAuthLoginRequest
-import com.angoga.android_nuclearhack.remote.model.response.UserResponse
+import com.angoga.android_nuclearhack.remote.model.dto.QrDto
 import com.angoga.android_nuclearhack.remote.model.response.WebAuthLoginResponse
+import com.angoga.android_nuclearhack.remote.model.request.WebAuthGrantAccessRequest
+import com.angoga.android_nuclearhack.remote.model.response.UserResponse
 import com.angoga.android_nuclearhack.service.CryptoService
 import com.angoga.android_nuclearhack.ui.screens.camera.CameraScanActivity
 import com.angoga.kfd_workshop_mobile.remote.model.Result
@@ -87,10 +88,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun initTryGrantAccess(content: String) {
-        val response = Gson().fromJson(content, WebAuthLoginRequest::class.java)
+        val response = Gson().fromJson(content, QrDto::class.java)
         val solved = CryptoService.decode(response.challenge, this)
         lifecycleScope.launch {
-            viewModel.tryGrantAccess(WebAuthLoginResponse(response.sessionId, solved))
+            viewModel.tryGrantAccess(WebAuthGrantAccessRequest(response.sessionId, solved))
         }
     }
 

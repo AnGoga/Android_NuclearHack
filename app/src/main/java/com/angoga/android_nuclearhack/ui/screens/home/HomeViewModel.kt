@@ -1,8 +1,7 @@
 package com.angoga.android_nuclearhack.ui.screens.home
 
 import androidx.lifecycle.ViewModel
-import com.angoga.android_nuclearhack.remote.model.request.WebAuthLoginRequest
-import com.angoga.android_nuclearhack.remote.model.response.WebAuthLoginResponse
+import com.angoga.android_nuclearhack.remote.model.request.WebAuthGrantAccessRequest
 import com.angoga.android_nuclearhack.remote.model.service.LoginAndRegistrationService
 import com.angoga.kfd_workshop_mobile.remote.model.Result
 import kotlinx.coroutines.Dispatchers
@@ -25,7 +24,7 @@ class HomeViewModel(
         }
     }
 
-    suspend fun tryGrantAccess(request: WebAuthLoginResponse) = withContext(Dispatchers.IO) {
+    suspend fun tryGrantAccess(request: WebAuthGrantAccessRequest) = withContext(Dispatchers.IO) {
         try {
             val message = httpService.grantAccess(request)
             Result.Success(message)

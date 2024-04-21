@@ -37,8 +37,10 @@ object CryptoService {
 
     private fun decodeString(key: PrivateKey, data: String): String {
         val cipher = Cipher.getInstance("RSA")
-        cipher.init(Cipher.DECRYPT_MODE, key)
-        return cipher.doFinal(data.toByteArray()).toString()
+        cipher.init (Cipher.DECRYPT_MODE, key)
+        val decodedData = Base64.getDecoder().decode(data)
+        val decryptedData = cipher.doFinal(decodedData)
+        return String(decryptedData, Charsets.UTF_8)
     }
     fun privateKeyToString(privateKey: PrivateKey): String {
         val keyBytes = privateKey.encoded

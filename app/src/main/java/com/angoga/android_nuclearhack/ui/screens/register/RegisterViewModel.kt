@@ -14,21 +14,22 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 
 import kotlinx.coroutines.launch
+import java.lang.Exception
 
 class RegisterViewModel(
     private val httpService: LoginAndRegistrationService
 ) : ViewModel() {
-    private val _flow = MutableSharedFlow<Result<UserResponse>>()
-    val flow: SharedFlow<Result<UserResponse>> = _flow
+    private val _flow = MutableSharedFlow<Result<LoginResponse>>()
+    val flow: SharedFlow<Result<LoginResponse>> = _flow
 
     fun register(email: String, password: String, name: String) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val response = httpService.register(RegistrationRequest(email, password, name))
                 _flow.emit(Result.Success(response))
-            } catch (e: Exception) {
+            } catch (e: Throwable) {
                 e.printStackTrace()
-                _flow.emit(Result.Error(e))
+                _flow.emit(Result.Error(Exception(e)))
             }
         }
     }

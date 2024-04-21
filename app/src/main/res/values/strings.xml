@@ -15,4 +15,8 @@
     <string name="scan">Сканировать</string>
     <string name="scan_for_sign_in">Отсканируйте, чтобы войти</string>
     <string name="welcome">Добро пожаловать!</string>
+    <string name="login_by_webauth">Войти через WebAuth</string>
+    <string name="scan_for_login">Отсканируйте Qr-код на другом устройстве, чтобы войти</string>
+    <string name="enter_your_email">Ведите свою почту</string>
+    <string name="continueText">Продолжить</string>
 </resources>
